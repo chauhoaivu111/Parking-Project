@@ -19,6 +19,8 @@ import ChevronLeftIcon from "@material-ui/icons/ChevronLeft";
 import NotificationsIcon from "@material-ui/icons/Notifications";
 import ListItem1 from "../components/listItem1";
 import MainListItems from "../components/listItem";
+import Datamanagement from "../components/Datamanagement ";
+// import Datamanagement  from "../components/Datamanagement ";
 
 
 
@@ -201,7 +203,10 @@ export default function Management() {
         <Container maxWidth="lg" className={classes.container}>
         <Paper > 
               <div style={{height:"600px"}}>
-                    Management
+                   
+       
+          <Datamanagement/>
+                    
               </div>
               
               </Paper>

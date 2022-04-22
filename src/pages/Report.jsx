@@ -19,6 +19,7 @@ import ChevronLeftIcon from "@material-ui/icons/ChevronLeft";
 import NotificationsIcon from "@material-ui/icons/Notifications";
 import ListItem1 from "../components/listItem1";
 import MainListItems from "../components/listItem";
+import Report_licencse from "../components/Report_licencse";
 
 
 
@@ -201,7 +202,7 @@ export default function Report() {
         <Container maxWidth="lg" className={classes.container}>
         <Paper > 
               <div style={{height:"600px"}}>
-                    Report
+                    <Report_licencse/>
               </div>
               
               </Paper>
