@@ -147,7 +147,7 @@ const Register = (props) => {
                                           
                                                 <div style={{marginTop: "8%"}}>
                                                       
-                                                      <Link to = "/"><h3 style={{ cursor: "pointer", color: "black", textDecoration: "underline"}}>ALREADY HAVE AN ACCOUNT. LOGIN HERE</h3></Link> 
+                                                      <Link to = "/Login"><h3 style={{ cursor: "pointer", color: "black", textDecoration: "underline"}}>ALREADY HAVE AN ACCOUNT. LOGIN HERE</h3></Link> 
                                                 </div>
                                                                         
                                           </div>

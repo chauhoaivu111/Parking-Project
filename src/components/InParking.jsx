@@ -17,7 +17,8 @@ import SaveAlt from "@material-ui/icons/SaveAlt";
 import Search from "@material-ui/icons/Search";
 import ViewColumn from "@material-ui/icons/ViewColumn";
 import { useState } from 'react';
-const Report_licencse = () =>{
+const Inparking
+ = () =>{
 
   const tableIcons = {
     Add: forwardRef((props, ref) => <AddBox {...props} ref={ref} />),
@@ -45,13 +46,13 @@ const Report_licencse = () =>{
     { name: "Trân Triệu Tuân",  Plates: 741852912, Date:  "11-01-2022", current: "true", Location: "402" },
     { name: "Lê Quan Thái",  Plates: 9876543210, Date:  "11-01-2022", current: "true", Location: "104" },
     { name: "Ktuyt's", Plates: 7845621301, Date:  "11-01-2022", current: "true", Location: "202" },
-    { name: "Đao Văn Ngọc Hoàng",  Plates: 7845621590, Date:  "11-01-2022", current: "false", Location: "505" },
-    { name: "Hà Đức Tuấn",  Plates: 741852912, Date:  "11-01-2022", current: "false", Location: "506" },
-    { name: "Ngô Văn kiều",  Plates: 9876543210, Date:  "11-01-2022", current: "false", Location: "303" },
+    { name: "Đao Văn Ngọc Hoàng",  Plates: 7845621590, Date:  "11-01-2022", current: "true", Location: "505" },
+    { name: "Hà Đức Tuấn",  Plates: 741852912, Date:  "11-01-2022", current: "true", Location: "506" },
+    { name: "Ngô Văn kiều",  Plates: 9876543210, Date:  "11-01-2022", current: "true", Location: "303" },
     { name: "Trần Thanh Thoa",  Plates: 7894561230, Date:  "11-01-2022", current: "true", Location: "107"},
-    { name: "Nguyện Thị Ngọc", Plates: 7845621590, Date:  "11-01-2022", current: "false", Location: "207" },
-    { name: "Bảo Gia Hân",  Plates: 741852912, Date: "11-01-2022" , current: "false", Location: "310" },
-    { name: "Trịnh Quốc PHúc",  Plates: 9876543210, Date: "11-01-2022", current: "false", Location: "410" },
+    { name: "Nguyện Thị Ngọc", Plates: 7845621590, Date:  "11-01-2022", current: "true", Location: "207" },
+    { name: "Bảo Gia Hân",  Plates: 741852912, Date: "11-01-2022" , current: "true", Location: "310" },
+    { name: "Trịnh Quốc PHúc",  Plates: 9876543210, Date: "11-01-2022", current: "true", Location: "410" },
   ])
   const columns = [
     { title: "Tên", field: "name"   },
@@ -62,8 +63,8 @@ const Report_licencse = () =>{
       
      
     },
-    { title: "In / Out ", field: "current",align: "center", render: (rowData) => <div style={{ color: rowData.current === "true" ? "#008000aa" : "#f90000aa",borderRadius:"4px",paddingLeft:5,fontSize:"12px" ,fontWeight:"600"}}>{rowData.current === "true" ? "In" : "Out"}</div>,
-    searchable: false, export: false,  cellStyle: { paddingRight:"50px"}},
+    { title: "In", field: "current",align: "center", render: (rowData) => <div style={{ color: rowData.current === "true" ? "#008000aa" : "#f90000aa",borderRadius:"4px",paddingLeft:5,fontSize:"12px" ,fontWeight:"600"}}>{rowData.current === "true" ? "In" : "Out"}</div>,
+    searchable: false, export: false,  cellStyle: { paddingRight:"41px"}},
     
   
   ]
@@ -83,33 +84,28 @@ const Report_licencse = () =>{
           searchFieldAlignment: "right",
           
           searchAutoFocus: true, searchFieldVariant: "standard",
-          // filtering: true,
-          //  paging: true,
+          
           
           pageSizeOptions: [2, 5, 10, 20, 25, 50, 100], pageSize: 9,
 
 
 
           paginationType: "stepped", showFirstLastPageButtons: false,
-          // paginationPosition: "both",
-          
-          // exportButton: true,
-          // exportAllData: true,
+      
           
           exportFileName: "TableData", addRowPosition: "first", actionsColumnIndex: -1, 
           
           
-          // selection: true,
+       
           showSelectAllCheckbox: false, showTextRowsSelected: false, selectionProps: rowData => ({
             disabled: rowData.age == null,
-            // color:"primary"
+       
           }),
-          // grouping: true,
-          // columnsButton: true,
+      
           rowStyle: (data, index) => index % 2 === 0 ? { background: "#f5f5f5" } : null,
-          // headerStyle: { background: "#f44336",color:"#fff"}
+        
         }}
-        title="Current parking information"
+        title="Motorbike information in the parking lot"
         />
       
     </div>
@@ -117,4 +113,5 @@ const Report_licencse = () =>{
   }
 
 
-export default Report_licencse 
+export default Inparking
+ 

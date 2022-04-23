@@ -14,7 +14,7 @@ import Badge from "@material-ui/core/Badge";
 import Container from "@material-ui/core/Container";
 import Grid from "@material-ui/core/Grid";
 import Paper from "@material-ui/core/Paper";
-import {Link} from "react-router-dom";
+import Link from "@material-ui/core/Link";
 import MenuIcon from "@material-ui/icons/Menu";
 import ChevronLeftIcon from "@material-ui/icons/ChevronLeft";
 import NotificationsIcon from "@material-ui/icons/Notifications";
@@ -25,6 +25,8 @@ import ArrowForwardIcon from "@material-ui/icons/ArrowForward";
 import motorbike from "../components/icons/motorbikebike.jpg";
 import motorbikeOut from "../components/icons/motorbikeout.png";
 import motorbikeIn from "../components/icons/motorbikeIN.jpg";
+import Inparking from "../components/InParking";
+import Outparking from "../components/OutParking";
 import Author from "../components/Author";
 const drawerWidth = 240;
 
@@ -118,7 +120,7 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-export default function Information() {
+export default function OutparkingPage() {
   const classes = useStyles();
   const [open, setOpen] = React.useState(true);
   const handleDrawerOpen = () => {
@@ -185,134 +187,18 @@ export default function Information() {
         <List>
           <ListItem1 />
         </List>
-
-
-        <Divider />
-
         <Author/>
-        
 
-
-        
       </Drawer>
       <main className={classes.content}>
         <div className={classes.appBarSpacer} />
         <Container maxWidth="lg" className={classes.container}>
           <Paper>
-            <div style={{ height: "600px" }}>
-              <G col={4} gap={20}>
-                
-                <Link to ="/InparkingPage">
-                <div
-                  style={{
-                    height: "400px",
-                    cursor: "pointer",
-                    textAlign: "center",
-                    justifyContent: "center",
-                    justifyContent: "center",
-                    justifyItems: "center",
-                  }}
-                >
-                  <img
-                    src={motorbikeIn}
-                    style={{ width: "100%", height: "100%" }}
-                  />
-                  <div
-                    style={{
-                      backgroundColor: "#ccfff2",
-                      minHeight: "50px",
-                      justifyContent: "center",
-                      justifyItems: "center",
-                      textAlign: "center",
-                      width: "90%",
-                      justifySelf: "center",
-                      marginLeft: "12px",
-                    }}
-                  >
-                    <p style={{ paddingTop: "10px" }}>30</p>
-                    <p>In Parking</p>
-                    <Button>
-                      More Infor <ArrowForwardIcon />
-                    </Button>
-                  </div>
-                </div>
-                </Link>
+          <div style={{height:"600px"}}>
+                    <Outparking/>
+              </div>
+           
               
-
-                <Link to ="/OutparkingPage" >
-                <div
-                  style={{
-                    height: "400px",
-                    cursor: "pointer",
-                    textAlign: "center",
-                    justifyContent: "center",
-                    justifyContent: "center",
-                    justifyItems: "center",
-                  }}
-                >
-                  <img
-                    src={motorbikeOut}
-                    style={{ width: "95%", height: "93%", marginTop: "13px" }}
-                  />
-                  <div
-                    style={{
-                      backgroundColor: "#b4f7ff",
-                      minHeight: "50px",
-                      justifyContent: "center",
-                      justifyItems: "center",
-                      textAlign: "center",
-                      width: "90%",
-                      justifySelf: "center",
-                      marginLeft: "15px",
-                      marginTop: "15px",
-                    }}
-                  >
-                    <p style={{ paddingTop: "10px" }}>30</p>
-                    <p>Out Parking</p>
-                    <Button>
-                      More Infor <ArrowForwardIcon />
-                    </Button>
-                  </div>
-                </div>
-                </Link>
-                <Link to ="/ParkingPage">
-
-                <div
-                  style={{
-                    height: "400px",
-                    cursor: "pointer",
-                    textAlign: "center",
-                    justifyContent: "center",
-                    justifyContent: "center",
-                    justifyItems: "center",
-                  }}
-                >
-                  <img
-                    src={motorbike}
-                    style={{ width: "100%", height: "100%" }}
-                  />
-                  <div
-                    style={{
-                      backgroundColor: "#afd7d0",
-                      minHeight: "50px",
-                      justifyContent: "center",
-                      justifyItems: "center",
-                      textAlign: "center",
-                      width: "90%",
-                      justifySelf: "center",
-                      marginLeft: "15px",
-                    }}
-                  >
-                    <p style={{ paddingTop: "10px" }}>60</p>
-                    <p>All motorbike</p>
-                    <Button>
-                      More Infor <ArrowForwardIcon />
-                    </Button>
-                  </div>
-                </div>
-                </Link>
-              </G>
-            </div>
           </Paper>
         </Container>
         {/* <Copyright /> */}

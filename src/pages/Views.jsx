@@ -19,6 +19,8 @@ import ChevronLeftIcon from "@material-ui/icons/ChevronLeft";
 import NotificationsIcon from "@material-ui/icons/Notifications";
 import ListItem1 from "../components/listItem1";
 import MainListItems from "../components/listItem";
+import Streaming from "../components/Steaming";
+import Author from "../components/Author";
 
 
 
@@ -169,7 +171,7 @@ export default function Views() {
             noWrap
             className={classes.title}
           >
-            Dashboard
+            View Streaming
           </Typography>
 
           <IconButton color="inherit">
@@ -195,13 +197,15 @@ export default function Views() {
         <List><MainListItems/></List>
         <Divider />
         <List><ListItem1/></List>
+
+        <Author/>
       </Drawer>
       <main className={classes.content}>
         <div className={classes.appBarSpacer} />
         <Container maxWidth="lg" className={classes.container}>
         <Paper > 
               <div style={{height:"600px"}}>
-                    Views
+                    <Streaming/>
               </div>
               
               </Paper>

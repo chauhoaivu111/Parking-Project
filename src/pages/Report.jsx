@@ -20,6 +20,7 @@ import NotificationsIcon from "@material-ui/icons/Notifications";
 import ListItem1 from "../components/listItem1";
 import MainListItems from "../components/listItem";
 import Report_licencse from "../components/Report_licencse";
+import Author from "../components/Author";
 
 
 
@@ -170,7 +171,7 @@ export default function Report() {
             noWrap
             className={classes.title}
           >
-            Dashboard
+            Report Licencse
           </Typography>
 
           <IconButton color="inherit">
@@ -196,6 +197,11 @@ export default function Report() {
         <List><MainListItems/></List>
         <Divider />
         <List><ListItem1/></List>
+
+        <Author/>
+
+        
+
       </Drawer>
       <main className={classes.content}>
         <div className={classes.appBarSpacer} />

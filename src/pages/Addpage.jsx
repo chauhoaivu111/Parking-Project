@@ -13,20 +13,34 @@ import Badge from "@material-ui/core/Badge";
 import Container from "@material-ui/core/Container";
 import Grid from "@material-ui/core/Grid";
 import Paper from "@material-ui/core/Paper";
-
+import Link from "@material-ui/core/Link";
 import MenuIcon from "@material-ui/icons/Menu";
 import ChevronLeftIcon from "@material-ui/icons/ChevronLeft";
 import NotificationsIcon from "@material-ui/icons/Notifications";
-import PersonAddRoundedIcon from '@material-ui/icons/PersonAddRounded';
 import ListItem1 from "../components/listItem1";
 import MainListItems from "../components/listItem";
-import Datamanagement from "../components/Datamanagement ";
-// import Datamanagement  from "../components/Datamanagement ";
-import { Link } from 'react-router-dom';
+import Report_licencse from "../components/Report_licencse";
+import Add from "../components/Add";
 import Author from "../components/Author";
 
 
 
+function Copyright() {
+  // classes created because it is needed in the footer.
+  const classes = useStyles();
+  return (
+    <Container className={classes.footer}>
+      <Typography variant="body2" color="textSecondary" align="center">
+        {"Copyright © "}
+        <Link color="inherit" href="https://material-ui.com/">
+          Your Website
+        </Link>{" "}
+        {new Date().getFullYear()}
+        {"."}
+      </Typography>
+    </Container>
+  );
+}
 
 const drawerWidth = 240;
 
@@ -120,7 +134,7 @@ const useStyles = makeStyles(theme => ({
   }
 }));
 
-export default function Management() {
+export default function Addpage() {
   const classes = useStyles();
   const [open, setOpen] = React.useState(true);
   const handleDrawerOpen = () => {
@@ -158,18 +172,14 @@ export default function Management() {
             noWrap
             className={classes.title}
           >
-            Management
+            Add User
           </Typography>
 
-          <Link to ="/Addpage">
           <IconButton color="inherit">
-    
-         
-              <PersonAddRoundedIcon style={{fontSize:"30px"}} />
-         
+            <Badge badgeContent={4} color="secondary">
+              <NotificationsIcon />
+            </Badge>
           </IconButton>
-          </Link>
-          
         </Toolbar>
       </AppBar>
       <Drawer
@@ -188,17 +198,15 @@ export default function Management() {
         <List><MainListItems/></List>
         <Divider />
         <List><ListItem1/></List>
-        <Author/>
+        <Divider />
+       <Author/>
       </Drawer>
       <main className={classes.content}>
         <div className={classes.appBarSpacer} />
         <Container maxWidth="lg" className={classes.container}>
         <Paper > 
               <div style={{height:"600px"}}>
-                   
-       
-          <Datamanagement/>
-                    
+                    <Add/>
               </div>
               
               </Paper>

@@ -16,7 +16,7 @@ import { Link } from "react-router-dom";
 const MainListItems = () => {
       return (
             <div> 
-    <Link to='/Information'> <ListItem button >
+    <Link to='/'> <ListItem button >
       <ListItemIcon>
         <DashboardIcon />
       </ListItemIcon>
