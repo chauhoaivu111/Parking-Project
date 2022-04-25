@@ -17,6 +17,7 @@ import SaveAlt from "@material-ui/icons/SaveAlt";
 import Search from "@material-ui/icons/Search";
 import ViewColumn from "@material-ui/icons/ViewColumn";
 import { useState } from 'react';
+import data_report from "./data/data_report"
 const Report_licencse = () =>{
 
   const tableIcons = {
@@ -39,20 +40,12 @@ const Report_licencse = () =>{
     ViewColumn: forwardRef((props, ref) => <ViewColumn {...props} ref={ref} />),
   };
 
-  const [tableData, setTableData] = useState([
-    { name: "Châu Hoài Vũ", Plates: 7894561230, Date: "11-02-2022", current: "true", Location: "102"},
-    { name: "Nguyễn Đức Nam",  Plates: 7845621590, Date:  "11-01-2022", current: "true", Location: "305" },
-    { name: "Trân Triệu Tuân",  Plates: 741852912, Date:  "11-01-2022", current: "true", Location: "402" },
-    { name: "Lê Quan Thái",  Plates: 9876543210, Date:  "11-01-2022", current: "true", Location: "104" },
-    { name: "Ktuyt's", Plates: 7845621301, Date:  "11-01-2022", current: "true", Location: "202" },
-    { name: "Đao Văn Ngọc Hoàng",  Plates: 7845621590, Date:  "11-01-2022", current: "false", Location: "505" },
-    { name: "Hà Đức Tuấn",  Plates: 741852912, Date:  "11-01-2022", current: "false", Location: "506" },
-    { name: "Ngô Văn kiều",  Plates: 9876543210, Date:  "11-01-2022", current: "false", Location: "303" },
-    { name: "Trần Thanh Thoa",  Plates: 7894561230, Date:  "11-01-2022", current: "true", Location: "107"},
-    { name: "Nguyện Thị Ngọc", Plates: 7845621590, Date:  "11-01-2022", current: "false", Location: "207" },
-    { name: "Bảo Gia Hân",  Plates: 741852912, Date: "11-01-2022" , current: "false", Location: "310" },
-    { name: "Trịnh Quốc PHúc",  Plates: 9876543210, Date: "11-01-2022", current: "false", Location: "410" },
-  ])
+
+  const tableData = data_report
+   
+
+
+
   const columns = [
     { title: "Tên", field: "name"   },
     // { title: "Tên", field: "email", filterPlaceholder: "filter" },
